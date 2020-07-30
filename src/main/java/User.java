@@ -2,8 +2,9 @@ public class User {
     private String id;
     private int personIntegration;
 
-    public User(String id) {
+    public User(String id, int personIntegration) {
         this.id = id;
+        this.personIntegration = personIntegration;
     }
 
     public String getId() {
