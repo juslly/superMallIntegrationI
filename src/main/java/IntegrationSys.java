@@ -7,7 +7,11 @@ public class IntegrationSys {
         int integrationAdd = 0;
         for(Goods goods : goodsList){
             if(isSaleGoods(goods.getGoodsName())){
-                integrationAdd += calculatePrice(goods) * 2;
+                if(calculatePrice(goods) > 1000){
+                    integrationAdd += 1000 * 2 + ((calculatePrice(goods) - 1000));
+                }else{
+                    integrationAdd += calculatePrice(goods) * 2;
+                }
             }else{
                 if(calculatePrice(goods) > 1000){
                     integrationAdd += 1000 + ((calculatePrice(goods) - 1000) / 20);

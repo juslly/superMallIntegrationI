@@ -15,31 +15,11 @@ public class Goods {
         return goodsName;
     }
 
-    public void setGoodsName(String goodsName) {
-        this.goodsName = goodsName;
-    }
-
     public double getGoodsPrice() {
         return goodsPrice;
     }
 
-    public void setGoodsPrice(double goodsPrice) {
-        this.goodsPrice = goodsPrice;
-    }
-
     public int getGoodsCount() {
         return goodsCount;
-    }
-
-    public void setGoodsCount(int goodsCount) {
-        this.goodsCount = goodsCount;
-    }
-
-    public GoodsType getGoodsType() {
-        return goodsType;
-    }
-
-    public void setGoodsType(GoodsType goodsType) {
-        this.goodsType = goodsType;
     }
 }
