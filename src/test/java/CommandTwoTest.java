@@ -17,7 +17,7 @@ public class CommandTwoTest {
         IntegrationSys integrationSys = new IntegrationSys();
         User user = new User("001",0);
         integrationSys.add(user,goodsList);
-        Assert.assertEquals(user.getPersonIntegration(),100);
+        Assert.assertEquals(100,user.getPersonIntegration());
 
     }
 }

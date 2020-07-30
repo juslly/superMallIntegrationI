@@ -9,8 +9,14 @@ public class IntegrationSys {
             if(isSaleGoods(goods.getGoodsName())){
                 integrationAdd += calculatePrice(goods) * 2;
             }else{
-                integrationAdd += calculatePrice(goods);
+                if(calculatePrice(goods) > 1000){
+                    integrationAdd += 1000 + ((calculatePrice(goods) - 1000) / 20);
+                }else{
+                    integrationAdd += calculatePrice(goods);
+                }
+
             }
+
         }
         int sumIntegration = user.getPersonIntegration() + integrationAdd;
         user.setPersonIntegration(sumIntegration);

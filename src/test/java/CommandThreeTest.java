@@ -4,16 +4,16 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommandOneTest {
+public class CommandThreeTest {
     @Test
-    public void should_return_100Integration_when_user_buy_goodsFor100(){
-        Goods goods = new Goods("棒棒糖",1,100);
+    public void should_return_one_integration_for_20_yuan_when_user_buy_goods_more_than_1000(){
+        Goods goods = new Goods("冰箱",2350,1);
         List<Goods> goodsList = new ArrayList<Goods>();
         goodsList.add(goods);
         IntegrationSys integrationSys = new IntegrationSys();
         User user = new User("001",0);
         integrationSys.add(user,goodsList);
-        Assert.assertEquals(100,user.getPersonIntegration());
+        Assert.assertEquals(1067,user.getPersonIntegration());
 
     }
 }
