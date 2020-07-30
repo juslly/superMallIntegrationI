@@ -42,4 +42,20 @@ public class CommandThreeTest {
         Assert.assertEquals(1890,user.getPersonIntegration());
 
     }
+
+    @Test
+    public void should_return_more_and_more_integration_when_user_buy_sale_goods_and_usual_goods1(){
+        Goods goods1 = new Goods("电视机",500,1);
+        Goods goods2 = new Goods("洗衣机",2000,1);
+        Goods goods3 = new Goods("苹果",10,50);
+        List<Goods> goodsList = new ArrayList<Goods>();
+        goodsList.add(goods1);
+        goodsList.add(goods2);
+        goodsList.add(goods3);
+        IntegrationSys integrationSys = new IntegrationSys();
+        User user = new User("001",0);
+        integrationSys.add(user,goodsList);
+        Assert.assertEquals(2100,user.getPersonIntegration());
+
+    }
 }
