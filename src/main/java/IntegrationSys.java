@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class IntegrationSys {
-    private List<String> saleGoodsTypes = Arrays.asList(GoodsType.苹果.toString(), GoodsType.西瓜.toString(), GoodsType.牛肉.toString());
+    private List<String> saleGoodsTypes = Arrays.asList(GoodsType.苹果.toString(), GoodsType.西瓜.toString(), GoodsType.牛肉.toString(),GoodsType.电视机.toString());
     public User add(User user, List<Goods> goodsList) {
         int integrationAdd = 0;
         for(Goods goods : goodsList){
